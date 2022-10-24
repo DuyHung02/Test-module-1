@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Rectangle</title>
+</head>
+<body>
+<canvas id="canvas" width="500" height="300" style="border: 1px solid #FF0000"></canvas>
+<script>
+    class Rectangle {
+        x;
+        y;
+        width;
+        height;
+        constructor(x, y, width, height) {
+            this.x = x;
+            this.y = y;
+            this.width = width;
+            this.height = height;
+        }
+    }
+    function createrectangle() {
+        let c = document.getElementById('canvas').getContext('2d')
+        let x = +prompt("Nhập tọa độ x: ");
+        let y = +prompt("Nhập tọa độ y: ");
+        let width = +prompt("Nhập chiều dài: ");
+        let height = +prompt("Nhập chiều rộng: ");
+        let hcn = new Rectangle(x, y, width, height);
+        c.strokeStyle= '#0000FF'
+        c.strokeRect(hcn.x, hcn.y, hcn.width, hcn.height);
+    }
+    createrectangle()
+</script>
+</body>
+</html>

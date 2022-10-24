@@ -6,13 +6,13 @@
 </head>
 <body>
 <script>
-  let a=[1,2,3,4,5,6]
-  function insertNumberToArray(value,index) {
-    if(index>0&&index<=a.length){
-      for(let i=a.length;i>index;i--){
+  let a=[1,2,3,4,5,6,7,8]
+  function insertNumberToArray(a,index) {
+    if(index > 0 &&index <= a.length){
+      for(let i = a.length; i> index; i--){
         a[i]=a[i-1];
       }
-      a[index]=value;
+      a[index]=a;
       return a;
     }
     else return a;
